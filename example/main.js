@@ -1485,7 +1485,7 @@ async function build() {
     buildF1(moduleBuilder, bn128.r, "fr", "frm");
     buildCurve(moduleBuilder, "g1", "f1m");
     buildMultiexp(moduleBuilder, "g1", "g1", "f1m", "fr");
-    buildFFT(moduleBuilder, "fft", "frm");
+    buildFFT(moduleBuilder, "fft", "frm", bigInt(7));
     buildPol(moduleBuilder, "pol", "frm");
 
     const pNonResidueF2 =  moduleBuilder.alloc(
@@ -5480,7 +5480,7 @@ async function build() {
     buildF1(moduleBuilder, groth16.r, "fr", "frm");
     buildCurve(moduleBuilder, "g1", "f1m");
     buildMultiexp(moduleBuilder, "g1", "g1", "f1m", "fr");
-    buildFFT(moduleBuilder, "fft", "frm");
+    buildFFT(moduleBuilder, "fft", "frm", bigInt(7));
     buildPol(moduleBuilder, "pol", "frm");
 
     const pNonResidueF2 =  moduleBuilder.alloc(
